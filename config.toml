@@ -2,3 +2,138 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "ananke"
+
+# Comments on github issue
+[params.utteranc]
+    repo = "bmpi-dev/bmpi.dev"
+    issue-term = "pathname"
+    theme = "github-light"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/bmpi-dev"
+[[params.social]]
+    name = "YouTube"
+    icon = "fab fa-youtube"
+    weight = 2
+    url = "https://www.youtube.com/channel/UCbg-Y24Z1H0nONW-bxgzv6w"    
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 3
+    url = "https://twitter.com/madawei2699"
+[[params.social]]
+    name = "Telegram"
+    icon = "fab fa-telegram"
+    weight = 4
+    url = "https://t.me/s/bmpi365"
+[[params.social]]
+    name = "WeChat"
+    icon = "fab fa-weixin"
+    weight = 5
+    url = "https://img.bmpi.dev/755b406f-43ae-e382-e13c-547116d3e7d5.png"
+[[params.social]]
+    name = "ZhiHu"
+    icon = "fab fa-zhihu"
+    weight = 6
+    url = "https://zhuanlan.zhihu.com/improve365"
+[[params.social]]
+    name = "Newsletter"
+    icon = "fas fa-envelope"
+    weight = 7
+    url = "https://tinyletter.com/i365"
+[[params.social]]
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 8
+    url = "index.xml"
+[[params.social]]
+    name = "Dev.to"
+    icon = "fas fa-dev-to"
+    weight = 9
+    url = "https://dev.to/madawei2699"
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+                name = "About"
+                weight = 1
+                url = "/about/"
+            [[languages.en.menu.main]]
+                name = "Self"
+                weight = 2
+                url  = "/self/"
+            [[languages.en.menu.main]]
+                name = "Dev"
+                weight = 3
+                url  = "/dev/"
+            [[languages.en.menu.main]]
+                name = "Money"
+                weight = 4
+                url  = "/money/"
+            [[languages.en.menu.main]]
+                name = "Project"
+                weight = 5
+                url  = "/project/"
+            [[languages.en.menu.main]]
+                name = "Goal"
+                weight = 6
+                url  = "/goal/"
+            [[languages.en.menu.main]]
+                name = "Twitter"
+                weight = 7
+                url  = "https://twitter.com/madawei2699"
+
+    [languages.zh-cn]
+        languagename = "Chinese"
+        title = "构建我的被动收入"
+
+        [languages.zh-cn.params]
+            author = "马大伟"
+            info1 = "📚 Lifelong Learner"
+            info2 = "👨‍💻 Full-Stack Developer"
+            info3 = "💴 ETF Trader"
+            description = "通过学习（GTD、时间管理、知识管理、写作、财务管理）、技术创造（前端、后端、移动端、DevOps）、投资（指数投资、基金、股票、债券）、网赚项目（SEO、Affiliate、Media Buy、Niche、社交媒体）来建立被动收入"
+            keywords = "自我提升、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚"
+            # footercontent = "self/dev/money"
+
+        [languages.zh-cn.menu]
+            [[languages.zh-cn.menu.main]]
+                name = "Dashboard"
+                weight = 1
+                url  = "https://datastudio.google.com/reporting/6c3c6d3d-cd2f-4f8c-85e6-c06d672c445b"
+            [[languages.zh-cn.menu.main]]
+                name = "关于"
+                weight = 2
+                url = "/about/"
+            [[languages.zh-cn.menu.main]]
+                name = "学习"
+                weight = 3
+                url  = "/self/"
+            [[languages.zh-cn.menu.main]]
+                name = "技术"
+                weight = 4
+                url  = "/dev/"
+            [[languages.zh-cn.menu.main]]
+                name = "投资"
+                weight = 5
+                url  = "/money/"
+            [[languages.zh-cn.menu.main]]
+                name = "个人项目"
+                weight = 6
+                url  = "/project/"
+            [[languages.zh-cn.menu.main]]
+                name = "长期目标"
+                weight = 7
+                url  = "/goal/"
+            [[languages.zh-cn.menu.main]]
+                name = "Twitter"
+                weight = 8
+                url  = "https://twitter.com/madawei2699"
