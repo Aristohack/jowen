@@ -139,7 +139,7 @@ url = "https://twitter.com/Jowen_CN"
             [[languages.en.menu.main]]
                 name = "Twitter"
                 weight = 7
-                url  = "https://twitter.com/madawei2699"
+                url  = "https://twitter.com/Jowen_CN"
 
     [languages.zh-cn]
         languagename = "Chinese"
