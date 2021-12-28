@@ -1,4 +1,5 @@
-baseURL = "https://jowen.vercel.app/"
+# baseURL = "https://jowen.vercel.app/"
+baseURL = "https://inspiring-joliot-d22edc.netlify.app/"
 title = "Jowen"
 theme = "hugo-coder"
 languageCode = "en"
