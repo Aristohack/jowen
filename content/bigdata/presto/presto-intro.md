@@ -1,3 +1,8 @@
+---
+title: "Presto架构原理与实践经验"
+date: 2022-01-29T10:46:53+08:00
+draft: true
+---
 ## 介绍
 Presto是由 Facebook 推出的一个**基于Java开发的开源分布式SQL查询引擎**，适用于交互式分析查询，数据量支持TB到PB字节。Presto本身并不存储数据，但是可以接入多种数据源，并且支持跨数据源的级联查询。
 > 注：Presto 不是通用的关系数据库。它不能替代 MySQL、PostgreSQL 或 Oracle 等数据库。设计Presto的目的并不是处理OLTP型事务。
