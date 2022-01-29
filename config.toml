@@ -1,141 +1,158 @@
 baseURL = "https://jowen.vercel.app/"
-# baseURL = "https://inspiring-joliot-d22edc.netlify.app/"
-title = "Jowen"
+title = "Jowen's Blog"
 theme = "hugo-coder"
-languageCode = "zh-cn"
-defaultContentLanguage = "zh-cn"
-paginate = 9999
-pygmentsStyle = "bw"
-pygmentsCodeFences = true
-pygmentsCodeFencesGuessSyntax = true
+languagecode = "zh-cn"
+defaultcontentlanguage = "zh-cn"
+
+enableRobotsTXT = true
+canonifyURLs = true
+
+enableGitInfo = true
 enableEmoji = true
-# Enable Disqus comments
-# disqusShortname = "yourdiscussshortname"
 
-[params]
-author = "Jowen"
-description = "Jowen's personal website"
-keywords = "blog,developer,personal"
-info = ["BigData Developer", "Xi'an"]
-avatarURL = "images/avatar.jpg"
-#gravatar = "john.doe@example.com"
-dateFormat = "2006-1-2"
-since = 2019
-# Git Commit in Footer, uncomment the line below to enable it
-commit = "https://github.com/luizdepra/hugo-coder/tree/"
-# Right To Left, shift content direction for languagues such as Arabic
-rtl = false
-# Specify light/dark colorscheme
-# Supported values:
-# "auto" (use preference set by browser)
-# "dark" (dark background, light foreground)
-# "light" (light background, dark foreground) (default)
-colorScheme = "auto"
-# Hide the toggle button, along with the associated vertical divider
-hideColorSchemeToggle = false
-# Series see also post count
-maxSeeAlsoItems = 5
-# Custom CSS
-customCSS = []
-# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
-customSCSS = []
-# Custom JS
-customJS = []
+paginate = 9999
 
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-# [params.fathomAnalytics]
-# siteID = "ABCDE"
-# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+pluralizelisttitles = false
 
-# If you want to use plausible(https://plausible.io) for analytics, add this section
-# [params.plausibleAnalytics]
-# domain = "example.com"
-# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
+FootnoteReturnLinkContents = "↑"
 
-# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
-# [params.goatCounter]
-# code = "code"
+[markup.goldmark.renderer]
+    unsafe= true
 
-# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
-# [params.cloudflare]
-# token = "token"
-
-# If you want to use Matomo(https://matomo.org) for analytics, add this section
-# [params.matomo]
-# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
-# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
-
-# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
-# [params.googleTagManager]
-# id = "gid"
-
-# If you want to implement a Content-Security-Policy, add this section
-[params.csp]
-childsrc = ["'self'"]
-fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
-formaction = ["'self'"]
-framesrc = ["'self'"]
-imgsrc = ["'self'"]
-objectsrc = ["'none'"]
-stylesrc = [
-  "'self'",
-  "'unsafe-inline'",
-  "https://fonts.googleapis.com/",
-  "https://cdn.jsdelivr.net/"
-]
-scriptsrc = ["'self'", "'unsafe-inline'", "https://www.google-analytics.com"]
-prefetchsrc = ["'self'"]
-# connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
-connectsrc = ["'self'", "https://www.google-analytics.com"]
+[outputs]
+  page     = ["HTML", "AMP"]
+  home     = ["HTML", "RSS"]
+  section  = ["HTML"]
+  taxonomyTerm = ["HTML"]
+  taxonomy = ["HTML"]
 
 [taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
+  category = "categories"
+  tag = "tags"
+  series = "series"
 
-[[params.social]]
-name = "Github"
-icon = "fa fa-2x fa-github"
-weight = 1
-url = "https://github.com/Aristohack/"
+[params]
+    author = "Jowen"
+    info1 = "📚 Lifelong Learner"
+    info2 = "👨‍💻 Bigdata Developer"
+#    info3 = "💴 ETF Trader"
+    description = "To be the best."
+    keywords = "life,dev,developer,IT technology"
+    avatarurl = "images/avatar.jpg"
+    logoImg = "images/avatar.jpg"
+    header = "BMPI.dev"
 
-[[params.social]]
-name = "Twitter"
-icon = "fa fa-2x fa-twitter"
-weight = 2
-url = "https://twitter.com/Jowen_CN"
+    twitter = "madawei2699"
+    github = "bmpi-dev"
+    telegram = "bmpi365"
+    zhihu = "improve365"
 
+    favicon_32 = "images/f3/favicon-32x32.png"
+    favicon_16 = "images/f3/favicon-16x16.png"
+
+    # footercontent = "self/dev/money"
+
+    hidecredits = true
+    hidecopyright = false
+
+    series = true
+
+    rtl = false
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "auto"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    math = true
+    custom_css = ["/css/main.css"]
+    custom_js = ["/js/lazysizes.min.js", "/js/flying-pages.min.js", "/js/custom.js"]
+
+    dateFormat = "2006-01-02"
+
+    # AMP
+    amp = true
+    ampElements = ["amp-ad","amp-analytics"]
+    themeColor = "#000000"
+    adsensePublisher = "ca-pub-1886683614725279"
+    googleAnalytics = "UA-154678195-1"
+
+    # OG
+    og_image = "images/bg2.png"
+
+# Comments on github issue
+[params.utteranc]
+    repo = "Aristohack/Aristohack"
+    issue-term = "pathname"
+    theme = "github-light"
+
+# Social links
 [[params.social]]
-name = "instagram"
-icon = "fa fa-2x fa-instagram"
-weight = 3
-url = "https://www.instagram.com/jowen_cn/"
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/Aristohack/"
+[[params.social]]
+    name = "YouTube"
+    icon = "fab fa-youtube"
+    weight = 2
+    url = "https://www.youtube.com/channel/UCM1XLAEEuRgbqBuzuNwAUfA"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 3
+    url = "https://twitter.com/Jowen_CN"
+#[[params.social]]
+#    name = "Twitter"
+#    icon = "Fab Fa-Instagram"
+#    weight = 5
+#    url = "https://www.instagram.com/jowen_cn/"
+[[params.social]]
+    name = "ZhiHu"
+    icon = "fab fa-zhihu"
+    weight = 6
+    url = "https://www.zhihu.com/people/qiao-wen-59-96"
+[[params.social]]
+    name = "Newsletter"
+    icon = "fas fa-envelope"
+    weight = 7
+    url = "https://tinyletter.com/Jowen"
+
+
 [languages]
     [languages.en]
         languagename = "English"
 
         [languages.en.menu]
+
             [[languages.en.menu.main]]
                 name = "About"
                 weight = 1
                 url = "/about/"
+#            [[languages.en.menu.main]]
+#                name = "Self"
+#                weight = 2
+#                url  = "/self/"
             [[languages.en.menu.main]]
                 name = "Bigdata"
-                weight = 2
+                weight = 3
                 url  = "/bigdata/"
             [[languages.en.menu.main]]
                 name = "Java"
-                weight = 3
-                url  = "/dev/bigdata/Presto"
-            [[languages.en.menu.main]]
-                name = "Money"
                 weight = 4
-                url  = "/money/"
-            [[languages.en.menu.main]]
-                name = "Project"
-                weight = 5
-                url  = "/project/"
+                url  = "/java/"
+#            [[languages.en.menu.main]]
+#                name = "Project"
+#                weight = 5
+#                url  = "/project/"
             [[languages.en.menu.main]]
                 name = "Goal"
                 weight = 6
@@ -147,12 +164,13 @@ url = "https://www.instagram.com/jowen_cn/"
 
     [languages.zh-cn]
         languagename = "Chinese"
+        title = "Jowen的博客"
 
         [languages.zh-cn.params]
             author = "乔文文"
-            info1 = "📚 Lifelong Learner"
-            info2 = "👨‍💻 BigData Developer"
-            info3 = "💴 ETF Trader"
+            info1 = "📚 终身学习者"
+            info2 = "👨‍💻 大数据开发工程师"
+#            info3 = "💴 ETF Trader"
             description = "通过学习（GTD、时间管理、知识管理、写作、财务管理）、技术创造（前端、后端、移动端、DevOps）、投资（指数投资、基金、股票、债券）、网赚项目（SEO、Affiliate、Media Buy、Niche、社交媒体）来建立被动收入"
             keywords = "自我提升、时间管理、GTD、写作、摄影、笔记管理、知识管理、财务管理、全栈开发、指数投资、基金、股票、债券、SEO、Affiliate、Media Buy、Niche、社交媒体、被动收入、网赚"
             # footercontent = "self/dev/money"
@@ -162,22 +180,22 @@ url = "https://www.instagram.com/jowen_cn/"
                 name = "关于"
                 weight = 2
                 url = "/about/"
+#            [[languages.zh-cn.menu.main]]
+#                name = "学习"
+#                weight = 3
+#                url  = "/self/"
             [[languages.zh-cn.menu.main]]
                 name = "大数据"
-                weight = 2
+                weight = 4
                 url  = "/bigdata/"
             [[languages.zh-cn.menu.main]]
                 name = "Java"
-                weight = 3
-                url  = "/dev/bigdata/Presto"
-            [[languages.zh-cn.menu.main]]
-                name = "投资"
                 weight = 5
-                url  = "/money/"
-            [[languages.zh-cn.menu.main]]
-                name = "个人项目"
-                weight = 6
-                url  = "/project/"
+                url  = "/java/"
+#            [[languages.zh-cn.menu.main]]
+#                name = "个人项目"
+#                weight = 6
+#                url  = "/project/"
             [[languages.zh-cn.menu.main]]
                 name = "长期目标"
                 weight = 7

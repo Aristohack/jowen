@@ -96,19 +96,19 @@ H6 {
 
 .img svg,
 .img img {
-    margin: 0;
-    width: 100%;
-    height: auto;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 .img {
-    position: relative
+  position: relative
 }
 
 .img img {
-    position: absolute;
-    top:0;
-    left:0;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 .about-social {
@@ -122,12 +122,12 @@ H6 {
 
 @keyframes animate {
     from {
-        filter: hue-rotate(0deg);
+      filter: hue-rotate(0deg);
     }
     to {
-        filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
     }
-}
+}  
 
 .about-social li {
     padding-bottom: 10px;
@@ -153,7 +153,6 @@ table thead tr th {
 
 p {
     overflow-wrap: break-word;
-    letter-spacing: .5px;
 }
 
 /*
@@ -204,7 +203,7 @@ fontawesome minify
 }
 .fa-youtube:before {
     animation: animate 3s linear 0.3s infinite;
-    content: "\e601";
+    content: "\e601"; 
 }
 .fa-envelope:before {
     animation: animate 3s linear 1.3s infinite;
@@ -233,17 +232,6 @@ fontawesome minify
 .fa-dev-to:before {
     animation: animate 3s linear infinite;
     content: "\e632";
-}
-.fa-jk:before {
-    animation: animate 3s linear 1.2s infinite;
-    content: "即刻";
-    font-weight: 300;
-}
-li .fa-jk {
-    transform: scale(0.7);
-}
-.about-social li:last-child {
-    margin-left: -10px;
 }
 .fa-calendar:before {
     content:"\e9de";
@@ -292,62 +280,4 @@ li .fa-jk {
     word-break: keep-all;
     display: flex;
     flex-flow: wrap;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    font-size: 1.5em;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: max-content;
-    background-color: #aaa;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 105%;
-    font-size: 0.6em;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-@media print {
-    .navigation, .post-meta, footer, #article-info, .webpushr-toggle-bell-popup {
-        display: none;
-    }
-
-    .post-title {
-        text-align: center;
-        font-family: "LXGW WenKai";
-    }
-
-    article {
-        margin: 40px 40px;
-    }
-
-    .article-content {
-        font-family: "LXGW WenKai" !important;
-    }
-
-    .highlight pre {
-        white-space: pre-wrap !important;
-    }
-
-    img {
-        width: 100%;
-        margin: auto;
-    }
-
-    .adsbygoogle {
-        display: none !important;
-    }
 }

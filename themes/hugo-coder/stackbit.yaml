@@ -1,24 +1,29 @@
-stackbitVersion: ~0.3.0
-ssgName: hugo
+stackbitVersion: ~0.2.0
+ssgName: custom
+publishDir: demo/public
+buildCommand: make prepare && hugo --source demo --baseURL "/"
 uploadDir: images
-pageLayoutKey: null
+staticDir: exampleSite/static
+pagesDir: exampleSite/content
+dataDir: exampleSite
 models:
   config:
-    type: config
-    label: Site Config
+    type: data
+    label: Config
+    file: config.toml
     fields:
       - type: string
         name: title
         label: Title
         required: true
       - type: string
-        name: baseURL
+        name: baseurl
         label: Base URL
         description: Hostname (and path) to the root
       - type: string
-        name: languageCode
+        name: languagecode
       - type: string
-        name: defaultContentLanguage
+        name: defaultcontentlanguage
       - type: string
         name: themesDir
       - type: string
@@ -27,13 +32,13 @@ models:
       - type: number
         name: paginate
       - type: boolean
-        name: canonifyURLs
+        name: canonifyurls
       - type: string
-        name: pygmentsStyle
+        name: pygmentsstyle
       - type: boolean
-        name: pygmentsCodeFences
+        name: pygmentscodefences
       - type: boolean
-        name: pygmentsCodeFencesGuessSyntax
+        name: pygmentscodefencesguesssyntax
       - type: string
         name: disqusShortname
       - type: object
@@ -50,27 +55,27 @@ models:
           - type: string
             name: info
           - type: string
-            name: avatarURL
+            name: avatarurl
           - type: string
-            name: dateFormat
+            name: footercontent
+          - type: string
+            name: dateformat
           - type: boolean
-            name: hideColorSchemeToggle
-          - type: number
-            name: since
+            name: hideCredits
+          - type: boolean
+            name: hideCopyright
           - type: string
             name: commit
           - type: boolean
             name: rtl
           - type: string
-            name: colorScheme
+            name: colorscheme
           - type: number
             name: maxSeeAlsoItems
           - type: list
-            name: customCSS
+            name: custom_css
           - type: list
-            name: customSCSS
-          - type: list
-            name: customJS
+            name: custom_js
           - type: list
             name: social
             label: Social Media Icons
@@ -89,65 +94,13 @@ models:
                 - type: string
                   name: url
                   label: URL
-                - type: string
-                  name: rel
-                  label: Rel
-                - type: string
-                  name: type
-                  label: Type
-          - type: object
-            name: fathomAnalytics
-            label: Fathom Analytics (optional)
-            fields:
-              - type: string
-                name: siteID
-                label: ID for Fathom Analytics
-              - type: string
-                name: serverURL
-                label: URL for Fathom Analytics
-          - type: object
-            name: plausibleAnalytics
-            label: Plausible Analytics (optional)
-            fields:
-              - type: string
-                name: domain
-                label: Website domain for Plausible Analytics
-              - type: string
-                name: serverURL
-                label: URL for Plausible Analytics
-          - type: object
-            name: goatCounter
-            label: Goat Counter (optional)
-            fields:
-              - type: string
-                name: code
-                label: URL for Goat Counter
-          - type: object
-            name: cloudflare
-            label:  Cloudflare Web Analytics (optional)
-            fields:
-              - type: string
-                name: token
-                label: token for Cloudflare Web Analytics
-          - type: object
-            name: matomo
-            label: Matomo (optional)
-            fields:
-              - type: string
-                name: siteID
-                label: Site ID for Matomo
-              - type: string
-                name: serverURL
-                label: URL for Matomo
       - type: object
         name: languages
         fields:
-          - type: model
+          - type: language_config
             name: en
-            models: [language_config]
-          - type: model
+          - type: language_config
             name: "pt-br"
-            models: [language_config]
       - type: object
         name: taxonomies
         fields:
@@ -157,8 +110,6 @@ models:
             name: series
           - type: string
             name: tag
-          - type: string
-            name: author
   basicpage:
     type: page
     label: Basic Page
@@ -201,11 +152,6 @@ models:
         label: Series
         items:
           type: string
-      - type: list
-        name: authors
-        label: Authors
-        items:
-          type: string
       - type: string
         name: externalLink
       - type: string
@@ -218,28 +164,12 @@ models:
         name: images
         items:
           type: string
-      - type: image
-        name: featuredImage
-        label: Featured Image
-        description: Image featured in post display
-      - type: list
-        name: authors
-        items:
-          type: string
-  snippets:
-    type: page
-    label: Snippets
-    folder: snippets
-    fields:
-      - type: string
-        name: title
-        label: Title
   language_config:
     type: object
     label: Language Config
     fields:
       - type: string
-        name: languageName
+        name: languagename
       - type: string
         name: title
       - type: object
@@ -253,8 +183,8 @@ models:
             name: description
           - type: string
             name: keywords
-          - type: number
-            name: since
+          - type: string
+            name: footercontent
       - type: object
         label: Menu
         name: menu

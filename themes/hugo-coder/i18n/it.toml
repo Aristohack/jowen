@@ -5,17 +5,11 @@ other = "categoria"
 other = "tag"
 
 [series]
-other = "serie"
-
-[author]
-other = "autore"
-
-[posts]
-other = "post"
+other = "series"
 
 [reading_time]
 one = "Lettura di un minuto"
-other = "{{ .Count }} minuti di lettura"
+other = "{{ .Count }} minuti letti"
 
 [page_not_found]
 other = "Pagina non trovata"
@@ -24,10 +18,7 @@ other = "Pagina non trovata"
 other = "Siamo spiacenti, questa pagina non esiste."
 
 [head_back]
-other = "Torna alla <a href=\"{{ . }}\">homepage</a>."
+other = "Puoi tornare a <a href=\"{{ . }}\">homepage</a>."
 
 [powered_by]
-other = "Generato da"
-
-[see_also]
-other = "Vedi anche in"
+other = "Alimentato da"

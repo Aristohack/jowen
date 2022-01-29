@@ -1,63 +1,24 @@
 [category]
 other = "categoría"
 
-[categories]
-other = "categorías"
-
 [tag]
-other = "etiqueta"
-
-[tags]
-other = "etiquetas"
+other = "tag"
 
 [series]
 other = "serie"
 
-[author]
-other = "autor"
-
-[authors]
-other = "autores"
-
-[posts]
-other = "publicaciones"
-
 [reading_time]
-one = "Un minuto de lectura"
-other = "{{ .Count }} minutos de lectura."
+one = "Un minuto de leer"
+other = "{{ .Count }} minutos de leer"
 
 [page_not_found]
-other = "Página no encontrada."
+other = "Pagina no existe"
 
 [page_does_not_exist]
-other = "Disculpa, la página no existe."
+other = "Disculpa, aquí no hay nada."
 
 [head_back]
-other = "Puedes regresar a la <a href=\"{{ . }}\">página inicial</a>."
+other = "Puedes regresar a la <a href=\"{{ . }}\">primera pagina</a>."
 
 [powered_by]
-other = "Desarrollado por"
-
-[see_also]
-other = "También ver en"
-
-[note]
-other = "nota"
-
-[tip]
-other = "consejo"
-
-[example]
-other = "ejemplo"
-
-[question]
-other = "pregunta"
-
-[info]
-other = "información"
-
-[warning]
-other = "advertencia"
-
-[error]
-other = "error"
+other = "Promovido por"

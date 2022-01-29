@@ -1,15 +1,41 @@
-<footer class="footer">
-  <section class="container">
-    ©
-    {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }}
-      {{ .Site.Params.since }} -
-    {{ end }}
-    {{ now.Year }}
-    {{ with .Site.Params.author }} {{ . }} {{ end }}
-    ·
-    {{ i18n "powered_by" }} <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
-    {{ if (and .Site.Params.commit .GitInfo) }}
-      [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>]
-    {{ end }}
-  </section>
-</footer>
+<!--<footer class="footer">-->
+<!--  <div class="footer-taxonomy">-->
+<!--    <div style="margin-bottom: 10px;">-->
+<!--      <a href="https://wiki.bmpi.dev/">Wiki</a>-->
+<!--      ⚔️-->
+<!--      <a href="/talk/">Talk</a>-->
+<!--      ⚔️-->
+<!--      <a href="/invest/">Invest</a>-->
+<!--      ⚔️-->
+<!--      <a href="https://tg.bmpi.dev">Think</a>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <a href= {{ relLangURL "affiliate" }} >Affiliate</a>-->
+<!--      ⚡️-->
+<!--      <a href= {{ relLangURL "tool" }} >Tool</a>-->
+<!--      ⚡️-->
+<!--      <a href= {{ relLangURL "link" }} >Link</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="footer-taxonomy">-->
+<!--    <a href= {{ relLangURL "tags" }} style="color: #B36D61;">Tags</a>-->
+<!--    👈-->
+<!--    <a href= {{ relLangURL "categories" }} style="color: #FF8C31;">Categories</a>-->
+<!--    👉-->
+<!--    <a href= {{ relLangURL "series" }} style="color: #519A73;">Series</a>-->
+<!--  </div>-->
+<!--  <section class="container">-->
+<!--    {{ with .Site.Params.footercontent | safeHTML }}-->
+<!--      <p>{{.}}</p>-->
+<!--    {{ end }}-->
+<!--    {{ if not .Site.Params.hideCopyright }} © 2019 - {{ now.Format "2006" }}{{ end }}-->
+<!--    {{ if not .Site.Params.hideCredits }}-->
+<!--      {{ if not .Site.Params.hideCopyright }} · {{ end }}-->
+<!--      {{ i18n "powered_by" }} <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.-->
+<!--    {{ end }}-->
+<!--    {{ if .Site.Params.commit }}-->
+<!--      {{ if or (not .Site.Params.hideCredits) (not .Site.Params.hideCopyright) }} · {{ end }}-->
+<!--      [<a href="{{ .Site.Params.commit }}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>]-->
+<!--    {{ end }}-->
+<!--  </section>-->
+<!--</footer>-->
