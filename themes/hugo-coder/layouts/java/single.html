@@ -26,7 +26,7 @@
             </span>
             {{ if eq .Site.Language.Lang "zh-cn" }}
             <span class="post-word-count"> | {{ .WordCount }} 字 | </span>
-            <span id="post-views"></span> 次阅读
+            <span id="post-views">19</span> 次阅读
             {{ else }}
             <span class="post-word-count"> | {{ .WordCount }} words | </span>
             <span id="post-views"></span> views
@@ -60,7 +60,8 @@
           {{ else }}
               {{ $ageMonths }}个月前
           {{ end }}
-           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>
+<!--           版本: <a href="https://github.com/madawei2699/bmpi.dev/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>-->
+          版本: <a href="https://github.com/Aristohack">{{ .GitInfo.AbbreviatedHash }}</a>
         </div>
         {{ end }}
 
