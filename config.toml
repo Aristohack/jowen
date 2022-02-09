@@ -180,10 +180,10 @@ FootnoteReturnLinkContents = "↑"
                 name = "关于"
                 weight = 2
                 url = "/about/"
-#            [[languages.zh-cn.menu.main]]
-#                name = "学习"
-#                weight = 3
-#                url  = "/self/"
+            [[languages.zh-cn.menu.main]]
+                name = "学习"
+                weight = 3
+                url  = "/self/"
             [[languages.zh-cn.menu.main]]
                 name = "大数据"
                 weight = 4

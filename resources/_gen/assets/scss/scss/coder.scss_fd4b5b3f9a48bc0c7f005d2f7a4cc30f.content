@@ -46,6 +46,20 @@ h1 {
     h1 {
       font-size: 24px;
       line-height: 3.4rem; } }
+.about h1 {
+  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-bottom: 1px LightGrey solid;
+  width: 98%;
+  line-height: 150%;
+  color: #666666 !important;
+  font-size: 30px;
+  line-height: 3.6rem; }
+  @media only screen and (max-width: 768px) {
+    .about h1 {
+      font-size: 24px;
+      line-height: 3.4rem; } }
 h2 {
   font-size: 26px;
   line-height: 3.2rem; }
@@ -102,7 +116,7 @@ code {
   font-family: "Source Code Pro", "Lucida Console", monospace;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: #E0E0E0;
+  background-color: rgba(255, 247, 0, 0.88);
   color: #212121;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem; }
 
@@ -232,6 +246,79 @@ a[href^="#fn:"]:after {
     color: #999999;
     font-size: 15px; }
 
+.article-content {
+  border: 1px solid lightgrey;
+  font-family: "LXGW WenKai","Helvetica Neue",helvetica,arial,"Heti Hei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  max-width: none !important;
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32); }
+  @media only screen and (max-width: 768px) {
+    .article-content {
+      border: none;
+      padding: 0 0 0 0;
+      margin-bottom: 0;
+      box-shadow: none;
+      font-size: 18px !important;
+      line-height: 1.6 !important; } }
+.heti blockquote {
+  background-color: #f7f7f7 !important; }
+
+.my-skill {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 768px) {
+    .my-skill {
+      display: none; } }
+.brand-ad {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #777; }
+  @media only screen and (max-width: 768px) {
+    .brand-ad {
+      font-size: 13px; } }
+.brand-content {
+  border-style: dotted;
+  border-width: 1px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  border-bottom: none; }
+
+.brand-ad-link {
+  text-align: right;
+  margin-top: -12px;
+  margin-right: 8px;
+  font-size: 14px; }
+  @media only screen and (max-width: 768px) {
+    .brand-ad-link {
+      font-size: 10px; } }
+  .brand-ad-link a {
+    color: #777; }
+
+.brand-ad-link-line {
+  display: block;
+  border-style: dotted;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: -13px;
+  margin-bottom: 25px;
+  margin-right: 72px;
+  margin-left: 3px; }
+  @media only screen and (max-width: 768px) {
+    .brand-ad-link-line {
+      margin-top: -8px;
+      margin-right: 51px;
+      margin-left: 2px; } }
 .content {
   flex: 1;
   display: flex;
