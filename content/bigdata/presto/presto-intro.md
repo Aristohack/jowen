@@ -16,7 +16,7 @@ series = []
 
 Presto是由 Facebook 推出的一个**基于Java开发的开源分布式SQL查询引擎**，适用于交互式分析查询，数据量支持TB到PB字节。Presto本身并不存储数据，但是可以接入多种数据源，并且支持跨数据源的级联查询。<br />到目前为止 Presto 有两大分支: PrestoDB 和 Trino（原名PrestoSQL后来改为Trino）。两个发行版都满足基本功能，只是在技术细节有细微差别。如底层通信方式、对部分文件的读取速度。总的来说，各有优劣。<br />PrestoDB：根红苗正，有大厂支持；<br />Trino：PrestoDB 之父的原班人马支持，社区更活跃；
 
-> 注：Presto 不是通用的关系数据库。它不能替代 MySQL、PostgreSQL 或 Oracle 等数据库。设计Presto的目的并不是处理OLTP型事务。
+> 注：Presto 1不是通用的关系数据库。它不能替代 MySQL、PostgreSQL 或 Oracle 等数据库。设计Presto的目的并不是处理OLTP型事务。
 
 <a name="z78Ke"></a>
 
@@ -66,10 +66,6 @@ Presto引擎相较于其他引擎的特点正如⽂章标题描述的这样，�
 
   ### 步骤
 
-  | **主机名** | **ip** | **role** |
-    | --- | --- | --- |
-  | slave1 | 192.168.1.115 | coordinator |
-  | slave2 | 192.168.1.116 | worker |
 
 
 <a name="N6QiZ"></a>
