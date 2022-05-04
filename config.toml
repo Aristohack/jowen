@@ -90,7 +90,8 @@ FootnoteReturnLinkContents = "↑"
 
 # Comments on github issue
 [params.utteranc]
-    repo = "Aristohack/Aristohack"
+    enable = true
+    repo = "Aristohack/jowen"
     issue-term = "pathname"
     theme = "github-light"
 
