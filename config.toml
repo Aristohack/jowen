@@ -22,22 +22,6 @@ FootnoteReturnLinkContents = "↑"
 [markup.goldmark.renderer]
     unsafe= true
 
-[yuque-sync]
-# 用户名
-user = "u2214051"
-# 知识库路径
-kb = "bevgfh"
-# 私密仓库需要token
-token = ""
-# api
-api = "https://www.yuque.com/api/v2"
-# port
-port = 8081
-# sync after command
-aftercmd = ""
-# markdown文件目录文件路径为content/${article}
-article = "bigdata"
-
 [outputs]
   page     = ["HTML", "AMP"]
   home     = ["HTML", "RSS"]
@@ -61,10 +45,10 @@ article = "bigdata"
     logoImg = "images/avatar.jpg"
     header = "BMPI.dev"
 
-    twitter = "madawei2699"
-    github = "bmpi-dev"
-    telegram = "bmpi365"
-    zhihu = "improve365"
+    twitter = "jowen"
+    github = "jowen"
+    telegram = "jowen"
+    zhihu = "jowen"
 
     favicon_32 = "images/f3/favicon-32x32.png"
     favicon_16 = "images/f3/favicon-16x16.png"
@@ -197,10 +181,10 @@ article = "bigdata"
                 name = "关于"
                 weight = 2
                 url = "/about/"
-            [[languages.zh-cn.menu.main]]
-                name = "学习"
-                weight = 3
-                url  = "/self/"
+#            [[languages.zh-cn.menu.main]]
+#                name = "学习"
+#                weight = 3
+#                url  = "/self/"
             [[languages.zh-cn.menu.main]]
                 name = "大数据"
                 weight = 4
@@ -209,10 +193,10 @@ article = "bigdata"
                 name = "Java"
                 weight = 5
                 url  = "/java/"
-            [[languages.zh-cn.menu.main]]
-                name = "个人项目"
-                weight = 6
-                url  = "/project/"
+#            [[languages.zh-cn.menu.main]]
+#                name = "个人项目"
+#                weight = 6
+#                url  = "/project/"
             [[languages.zh-cn.menu.main]]
                 name = "长期目标"
                 weight = 7

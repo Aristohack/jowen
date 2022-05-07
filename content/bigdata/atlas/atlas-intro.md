@@ -1,7 +1,7 @@
 +++
 draft = true
 date = 2021-05-21T19:10:10+08:00
-title = "《Atlas技术调研》"
+title = "Atlas技术调研"
 description = "对包括基本使用、环境部署、二次开发以及大厂实践经验进行简单介绍。"
 slug = ""
 tags = []

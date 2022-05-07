@@ -1,6 +1,7 @@
 +++
-draft = false
-title = "《Presto技术调研》"
+draft = true
+date = 2021-05-21T19:10:10+08:00
+title = "Presto技术调研"
 description = "对包括基本使用、环境部署、二次开发以及大厂实践经验进行简单介绍。"
 slug = ""
 tags = []
@@ -51,7 +52,8 @@ Presto引擎相较于其他引擎的特点正如⽂章标题描述的这样，�
   <a name="ARsu1"></a>
 
   ### 2.整体架构图
-  Presto查询引擎是一个Master-Slave的架构，由一个Coordinator节点，一个Discovery Server节点，多个Worker节点组成，Discovery Server通常内嵌于Coordinator节点中。Coordinator负责解析SQL语句，生成执行计划，分发执行任务给Worker节点执行。Worker节点负责实际执行查询任务。Worker节点启动后向Discovery Server服务注册，Coordinator从Discovery Server获得可以正常工作的Worker节点。如果配置了Hive Connector，需要配置一个Hive MetaStore服务为Presto提供Hive元信息，Worker节点与HDFS交互读取数据。<br />![imagepng](https://cdn.nlark.com/yuque/0/2021/png/2707056/1640501799769-d498dc34-e73e-4901-b2b6-eef480c2fd29.png#clientId=u7e3b3ccf-ffa5-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=321&id=u137ed407&margin=%5Bobject%20Object%5D&name=image.png&originHeight=641&originWidth=1270&originalType=binary&ratio=1&rotation=0&showTitle=true&size=138027&status=done&style=none&taskId=ueb8e4524-1eb3-4317-9eab-27b6014d8d3&title=Presto%E6%9E%B6%E6%9E%84%E5%9B%BE%EF%BC%88%E7%AE%80%E5%8C%96%EF%BC%89&width=635 "Presto架构图（简化）")<br />![imagepng](https://cdn.nlark.com/yuque/0/2021/png/2707056/1640762900065-d379cecc-dd7f-415e-acc6-04deedbac755.png#clientId=u427bfdde-3501-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=351&id=jO4Ju&margin=%5Bobject%20Object%5D&name=image.png&originHeight=702&originWidth=1434&originalType=binary&ratio=1&rotation=0&showTitle=false&size=609387&status=done&style=none&taskId=u1469520c-3bb8-4253-9b35-23ecd8c136d&title=&width=717)
+  Presto查询引擎是一个Master-Slave的架构，由一个Coordinator节点，一个Discovery Server节点，多个Worker节点组成，Discovery Server通常内嵌于Coordinator节点中。Coordinator负责解析SQL语句，生成执行计划，分发执行任务给Worker节点执行。Worker节点负责实际执行查询任务。Worker节点启动后向Discovery Server服务注册，Coordinator从Discovery Server获得可以正常工作的Worker节点。如果配置了Hive Connector，需要配置一个Hive MetaStore服务为Presto提供Hive元信息，Worker节点与HDFS交互读取数据。<br />![adgagdfgdsgdsga.png](../../../images/adgagdfgdsgdsga.png)
+  ![YKYUKRKSDFGSDG.png](../../../images/YKYUKRKSDFGSDG.png)
   <a name="lZMzS"></a>
 
   ## 安装部署
