@@ -22,6 +22,22 @@ FootnoteReturnLinkContents = "↑"
 [markup.goldmark.renderer]
     unsafe= true
 
+[yuque-sync]
+# 用户名
+user = "u2214051"
+# 知识库路径
+kb = "bevgfh"
+# 私密仓库需要token
+token = ""
+# api
+api = "https://www.yuque.com/api/v2"
+# port
+port = 8081
+# sync after command
+aftercmd = ""
+# markdown文件目录文件路径为content/${article}
+article = "bigdata"
+
 [outputs]
   page     = ["HTML", "AMP"]
   home     = ["HTML", "RSS"]
