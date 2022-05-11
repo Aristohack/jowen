@@ -4,11 +4,52 @@ date = 2021-05-21T19:10:10+08:00
 title = "Presto技术调研"
 description = "对包括基本使用、环境部署、二次开发以及大厂实践经验进行简单介绍。"
 slug = ""
-tags = []
-categories = []
+tags = ["presto","技术调研"]
+categories = ["presto","技术调研"]
 externalLink = ""
 series = []
 +++
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [介绍](#%E4%BB%8B%E7%BB%8D)
+  - [1.基本概念](#1%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
+    - [1.1 术语](#11-%E6%9C%AF%E8%AF%AD)
+    - [1.2 特点](#12-%E7%89%B9%E7%82%B9)
+    - [1.在slave1节点上安装coordinator](#1%E5%9C%A8slave1%E8%8A%82%E7%82%B9%E4%B8%8A%E5%AE%89%E8%A3%85coordinator)
+      - [1.1配置Node Properties](#11%E9%85%8D%E7%BD%AEnode-properties)
+      - [2.3配置Node Properties](#23%E9%85%8D%E7%BD%AEnode-properties)
+      - [2.4presto安装后，包结构如下](#24presto%E5%AE%89%E8%A3%85%E5%90%8E%E5%8C%85%E7%BB%93%E6%9E%84%E5%A6%82%E4%B8%8B)
+    - [3.启动集群](#3%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4)
+- [安全认证](#%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81)
+  - [1.在coordinator节点上安装kerberos client](#1%E5%9C%A8coordinator%E8%8A%82%E7%82%B9%E4%B8%8A%E5%AE%89%E8%A3%85kerberos-client)
+  - [2.生成keytab，在slave1节点上执行如下命令，生成qun.keytab](#2%E7%94%9F%E6%88%90keytab%E5%9C%A8slave1%E8%8A%82%E7%82%B9%E4%B8%8A%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90qunkeytab)
+  - [3.生成keystore](#3%E7%94%9F%E6%88%90keystore)
+  - [4.配置jdk，Java Cryptography Extension Policy Files](#4%E9%85%8D%E7%BD%AEjdkjava-cryptography-extension-policy-files)
+  - [5.修改config.properties](#5%E4%BF%AE%E6%94%B9configproperties)
+  - [6.修改Hive Connection](#6%E4%BF%AE%E6%94%B9hive-connection)
+  - [7.修改jvm.config](#7%E4%BF%AE%E6%94%B9jvmconfig)
+  - [8.连接presto集群](#8%E8%BF%9E%E6%8E%A5presto%E9%9B%86%E7%BE%A4)
+- [性能优化](#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96)
+  - [1.Presto优化之数据存储](#1presto%E4%BC%98%E5%8C%96%E4%B9%8B%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8)
+    - [1.1合理设置分区](#11%E5%90%88%E7%90%86%E8%AE%BE%E7%BD%AE%E5%88%86%E5%8C%BA)
+    - [1.2使用列式存储](#12%E4%BD%BF%E7%94%A8%E5%88%97%E5%BC%8F%E5%AD%98%E5%82%A8)
+    - [1.3使用压缩](#13%E4%BD%BF%E7%94%A8%E5%8E%8B%E7%BC%A9)
+  - [2.Presto优化之查询SQL](#2presto%E4%BC%98%E5%8C%96%E4%B9%8B%E6%9F%A5%E8%AF%A2sql)
+    - [2.1只选择使用的字段](#21%E5%8F%AA%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AD%97%E6%AE%B5)
+    - [2.2过滤条件必须加上分区字段](#22%E8%BF%87%E6%BB%A4%E6%9D%A1%E4%BB%B6%E5%BF%85%E9%A1%BB%E5%8A%A0%E4%B8%8A%E5%88%86%E5%8C%BA%E5%AD%97%E6%AE%B5)
+    - [2.3Group By语句优化](#23group-by%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96)
+    - [2.4Order by时使用Limit](#24order-by%E6%97%B6%E4%BD%BF%E7%94%A8limit)
+    - [2.5使用Join语句时将大表放在左边](#25%E4%BD%BF%E7%94%A8join%E8%AF%AD%E5%8F%A5%E6%97%B6%E5%B0%86%E5%A4%A7%E8%A1%A8%E6%94%BE%E5%9C%A8%E5%B7%A6%E8%BE%B9)
+  - [3.注意事项](#3%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+    - [3.1字段名引用](#31%E5%AD%97%E6%AE%B5%E5%90%8D%E5%BC%95%E7%94%A8)
+    - [3.2时间函数](#32%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0)
+    - [3.3不支持INSERT OVERWRITE语法](#33%E4%B8%8D%E6%94%AF%E6%8C%81insert-overwrite%E8%AF%AD%E6%B3%95)
+    - [3.4PARQUET格式](#34parquet%E6%A0%BC%E5%BC%8F)
+- [二次开发](#%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91)
+- [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <a name="gIY1E"></a>
 

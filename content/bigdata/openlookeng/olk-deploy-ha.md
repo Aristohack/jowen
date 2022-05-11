@@ -1,6 +1,6 @@
 +++
 draft = true
-date = 2022-04-21T19:10:10+08:00
+date = 2022-03-16T21:14:12+08:00
 title = "OpenLooKeng高可用部署"
 description = "对包括基本使用、环境部署、二次开发以及大厂实践经验进行简单介绍。"
 slug = ""
