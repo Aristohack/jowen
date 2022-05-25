@@ -131,7 +131,7 @@ function addAuthorPart(html) {
     p1.setAttribute('style', 'font-size: 0.8em;color: #eee;margin-bottom: 0px;padding-top: 0px;margin-top: 0px;');
     div.appendChild(p1);
     let p2 = document.createElement('p');
-    p2.textContent = '/ 马大伟';
+    p2.textContent = '/ 乔文文';
     p2.setAttribute('style', 'font-size: 0.8em;color: #eee;margin-top: -3px;margin-bottom: -3px;padding-bottom: -3px;padding-bottom: -3px;');
     div.appendChild(p2);
     let p3 = document.createElement('p');
