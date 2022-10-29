@@ -1,18 +1,14 @@
----
-title: Apollo简单入门
-tags:
-  - Apollo
-  - 分布式配置中心
-categories:
-  - 分布式配置中心
-  - Apollo
-keywords: Apollo，配置中心。
-description: Apollo简单入门及和SpringBoot集成。
-cover: 'https://npm.elemecdn.com/lql_static@latest/logo/apollo.png'
-abbrlink: 10d32fba
-date: 2020-12-29 11:31:58
----
-
++++
+draft = true
+date = 2021-02-14T15:12:14+08:00
+title = "Kafka简1介"
+description = "对包括基本使用、环境部署、二次开发以及大厂实践经验进行简单介绍。"
+slug = ""
+tags = ["kafka1"]
+categories = ["kafka1"]
+externalLink = ""
+series = []
++++
 
 
 # Apollo简单入门
