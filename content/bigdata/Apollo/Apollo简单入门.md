@@ -1,14 +1,18 @@
-+++
-draft = true
-date = 2021-02-14T15:12:14+08:00
-title = "Kafka简1介"
-description = "对包括基本使用、环境部署、二次开发以及大厂实践经验进行简单介绍。"
-slug = ""
-tags = ["kafka1"]
-categories = ["kafka1"]
-externalLink = ""
-series = []
-+++
+---
+title: Apollo简单入门
+tags:
+  - Apollo
+  - 分布式配置中心
+categories:
+  - 分布式配置中心
+  - Apollo
+keywords: Apollo，配置中心。
+description: Apollo简单入门及和SpringBoot集成。
+cover: 'https://npm.elemecdn.com/lql_static@latest/logo/apollo.png'
+abbrlink: 10d32fba
+date: 2020-12-29 11:31:58
+---
+
 
 
 # Apollo简单入门
@@ -1040,6 +1044,33 @@ public class NotificationControllerV2 implements ReleaseMessageListener {
 客户端发送请求类：[RemoteConfigLongPollService](https://github.com/ctripcorp/apollo/blob/master/apollo-client/src/main/java/com/ctrip/framework/apollo/internals/RemoteConfigLongPollService.java)
 
 ```java
+private void doLongPollingRefresh(String appId, String cluster, String dataCenter, String secret) {
+    final Random random = new Random();
+    ServiceDTO lastServiceDto = null;
+    while (!m_longPollingStopped.get() && !Thread.currentThread().isInterrupted()) {
+      if (!m_longPollRateLimiter.tryAcquire(5, TimeUnit.SECONDS)) {
+        //wait at most 5 seconds
+        try {
+          TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+        }
+      }
+      Transaction transaction = Tracer.newTransaction("Apollo.ConfigService", "pollNotification");
+      String url = null;
+      try {
+        if (lastServiceDto == null) {
+          List<ServiceDTO> configServices = getConfigServices();
+          lastServiceDto = configServices.get(random.nextInt(configServices.size()));
+        }
+
+        url =
+            assembleLongPollRefreshUrl(lastServiceDto.getHomepageUrl(), appId, cluster, dataCenter,
+                m_notifications);
+
+        logger.debug("Long polling from {}", url);
+
+        HttpRequest request = new HttpRequest(url);
+        request.setReadTimeout(LONG_POLLING_READ_TIMEOUT);
 ```
 
 
