@@ -1,11 +1,11 @@
 ---
-title: Presto介绍
+title: Presto技术调研
 tags:
   - Presto
 categories:
   - Presto
-keywords: Apollo。
-description: Presto。
+keywords: Presto。
+description: Presto技术调研。
 abbrlink: 10d32fba
 date: 2020-12-29 11:31:58
 ---

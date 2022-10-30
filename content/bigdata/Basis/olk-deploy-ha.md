@@ -1,11 +1,11 @@
 ---
-title: OpenLooKeng介绍
+title: OpenLooKeng高可用部署
 tags:
   - Openlookeng
 categories:
   - OpenLooKeng
-keywords: OpenLooKeng介绍
-description: OpenLooKeng介绍。
+keywords: OpenLooKeng高可用部署
+description: OpenLooKeng高可用部署。
 abbrlink: de3879ae
 date: 2020-10-19 22:15:58
 ---
